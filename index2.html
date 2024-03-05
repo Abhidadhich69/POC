@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="nav">
+                <h1 >HTML POC by Abhishek Sharma</h1>
+            </div>
+        </header>
+
+        <div class="side-nav">
+            <div class="side-nav1">
+                <h3>MAIN MENU</h3>
+            </div>
+           
+            <div class="nav-e">              
+                <a href="#" id="userLink" onclick="toggleUserTable()">USER LISTENING</a>
+            </div>
+            <div class="nav-e">              
+                <a href="" id="userLink2" onclick="toggleUserForm(event)">ADD USER</a>
+            </div>
+        </div>
+
+        <div class="info" id="userinfo" style="display: none;" >
+            <div class="form">
+                <form id="userForm" action="#" method="post">
+                    <div class="f-1">
+                    <label for="profile_title">Profile Title:</label>
+                    <input type="text" id="profile_title" name="profile_title"  required >
+                    </div>
+
+                    <div class="f-1">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name"  required>
+                    </div>
+               
+                    <div class="f-1">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="f-1">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password"  required>
+                    </div>
+              
+                    <div class="f-1">
+                        <label for="image">Image:</label>
+                        <input type="file" id="image" name="image"  required>
+                    </div>
+                 
+                    <div class="f-1">
+                        <label for="dob">DOB:</label>
+                    <input type="date" id="dob" name="dob"  required>
+                    </div>
+                    
+                    <div class="f-1">
+                        <label for="phone">Phone No:</label>
+                        <input type="tel" id="phone" name="phone"  required>
+                    </div>
+
+                    <div class="f-1">
+                        <label for="intro_video">Intro Video:</label>
+                        <input type="file" id="intro_video" name="intro_video"  required>
+                    </div>
+       
+                    <div class="f-1">
+                        <label for="bio">Bio:</label>
+                            <textarea name="bbio" id="bio" cols="30" rows="10" style="resize: none;"  required></textarea>
+                    </div>
+                   
+                    <div class="f-1">
+                         <button id="submit">Sumbit</button>
+                    </div>
+                  </form>
+            </div>
+
+            <table id="userTable" >
+                <thead>
+                    <tr>
+                        <th>Thumbnail</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>DOB</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- Table rows go here -->
+                    <tr>
+                        <!-- <td><img src="6397022.jpg" alt="Thumbnail 1" width="50"></td>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>1990-01-01</td>
+                        <td>
+                            <a href="#" onclick="viewUser(1)">View</a> | 
+                            <a href="#" onclick="editUser(1)">Edit</a> | 
+                            <a href="#" onclick="deleteUser(1)">Delete</a>
+                        </td> -->
+                    </tr>
+                    <tr>
+                        <!-- <td><img src="thumbnail2.jpg" alt="Thumbnail 2" width="50"></td>
+                        <td>Jane Smith</td>
+                        <td>jane@example.com</td>
+                        <td>1995-05-15</td>
+                        <td>
+                            <a href="#" onclick="viewUser(2)">View</a> | 
+                            <a href="#" onclick="editUser(2)">Edit</a> | 
+                            <a href="#" onclick="deleteUser(2)">Delete</a>
+                        </td> -->
+                    </tr>
+                </tbody>
+            </table>
+    </main>
+
+    <script src="script.js">
+
+       JSON.parselocalStorage.getItem("Records")
+
+    </script>
+</body>
+</html>
